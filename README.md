@@ -1,1 +1,2 @@
 # python-mini-projects
+secure-password-generator (provides a random sequency of letters, upper or lowercase, digits and special characters. also, shows how much time is needed to break it, so you can pick a secure password... or not)
