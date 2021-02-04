@@ -1,0 +1,24 @@
+from random import randint
+
+choose = ('Rock', 'Paper', 'Scissors')
+machine = randint(0, 2)
+print('Choose wisely...\n{0} R O C K\n{1} P A P E R\n{2} S C I S S O R S')
+player = int(input('So, what will be? '))
+if player<=2:
+    print('.-.' * 10)
+    print('Machine chose ', choose[machine], '\nPlayer chose ', choose[player])
+    print('.-.' * 10)
+if machine == 0:
+    if player == 0:
+        print('-  TIED MATCH  -')
+    elif player == 1:
+        print('-  PLAYER WON  -')
+    elif (player == 2):
+        print('-  MACHINE WON  -')
+elif machine == 1:
+    if player == 1:
+        print('-  TIED MATCH  -')
+elif machine == 2:
+    if player == 2:
+        print('-  TIED MATCH  -')
+INCOMPLETA
