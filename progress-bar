@@ -1,0 +1,17 @@
+import time as tm
+
+def progress_bar(done):
+    print("\rProcessing: [{0:50s}] {1:.0f}%".format(':' * int(done * 50), done * 100),end='')
+
+
+def bar():
+    for n in range(4):
+        progress_bar(n/3)
+        tm.sleep(1)
+    print('\n')
+
+while True: # random function for testing purpose
+    a1 = int(input('Insert a number '))
+    a2 = int(input('Insert another number '))
+    bar()
+    print('Calculation completed successfully. The result is equal to', a1+a2)
