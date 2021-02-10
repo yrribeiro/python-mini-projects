@@ -4,3 +4,5 @@
 > jokenpo (classic rock-paper-scissors game against your machine)
 
 > progress-bar (shows a simple progress bar on terminal)
+
+> guess-number (exactly what it sounds like)
