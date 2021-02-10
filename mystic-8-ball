@@ -17,7 +17,7 @@ while True:
         tm.sleep(2)
 
 
------------------------------------------ with an GUI
+----------------------------------------- with a GUI
 
 import PySimpleGUI as psg
 import random as rd
