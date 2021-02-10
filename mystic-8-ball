@@ -15,3 +15,58 @@ while True:
     else:
         print('YOUR ANSWER IS ', rd.choice(answers))
         tm.sleep(2)
+
+
+----------------------------------------- with an GUI
+
+import PySimpleGUI as psg
+import random as rd
+
+
+class Screen:
+    def __init__(self):
+        psg.change_look_and_feel('DarkBlack')
+        self.answers = [
+            'Yes!', 
+            'No... :(',
+            'Maybe, if you try hard.',
+            'Sorry, only God can answer this. ASK HIM',
+            'I say Yes, but your mom can get angry...',
+            'OBVIOUSLY NO',
+            'Quit it',
+            'NO, go drink instead', 
+            'Yes, and you will have full support', 
+            'Yes, but you may find some trouble', 
+            'You are too young for understand that', 
+            'Through study you can achieve it',
+            'After the storm comes a calm', 
+            'Later will be expansive', 
+            'While there is life, there is hope.', 
+            'Practice makes perfect', 
+            'Haste makes waste', 
+            'Looks can be deceiving',
+            'Two heads are better than one', 
+            'A blessing in disguise', 
+            'You can not please everyone', 
+            'It takes two to tango', 
+            'You live and learn', 'When a thing is funny, search it carefully for a hidden truth'
+        ]
+
+    
+    def Start(self):
+        layout = [
+            [psg.Text('     WELCOME TO THE MYSTIC EIGHT BALL    ')],
+            [psg.Text('What is your question?')],
+            [psg.Input(size=(40, 20))],
+            [psg.Output(size=(40,5))],
+            [psg.Button('Get my answer')]
+        ]
+        
+        self.window = psg.Window('MYSTIC EIGHT BALL', layout=layout)
+        while True:
+            self.events, self.values = self.window.Read()
+            if self.events == 'Get my answer':
+                print(rd.choice(self.answers))
+        self.window.Close()
+magic8all = Screen()
+magic8all.Start()
