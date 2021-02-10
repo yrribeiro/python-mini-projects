@@ -1,0 +1,22 @@
+from random import randint
+import string
+
+maximum = 101
+minimum = 0
+
+
+machine_choice = randint(minimum, maximum)
+while True:
+    player_guess = input('Guess which number I chose! [0 - 100] -> ')
+    if player_guess.isdigit() == False:
+        print('~~ Please, insert only integer numbers!\n....................')
+    else:
+        if int(player_guess) > maximum-1:
+            print('!! NUMBER OUT OF RANGE !!')
+        if int(player_guess) == machine_choice:
+            print('~~ WELL DONE! You are right\n....................')
+            break
+        elif 0 <= int(player_guess) < machine_choice:
+            print('~~ No, it is a BIGGER number. Try again\n....................')
+        elif 100 >= int(player_guess) > machine_choice:
+            print('~~ No, it is a SMALLER number. Try again\n....................')
